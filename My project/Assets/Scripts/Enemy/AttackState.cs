@@ -30,6 +30,10 @@ public class AttackState : State
     private void Attack(Player target)
     {
         _animator.Play("Attack");
-        target.ApplyDamage(_damage);
+
+        if(target != null)
+        {
+            target.ApplyDamage(_damage);
+        }       
     }
 }
