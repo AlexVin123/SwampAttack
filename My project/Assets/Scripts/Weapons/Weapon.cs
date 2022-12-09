@@ -9,7 +9,9 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] private Sprite _icon;
     [SerializeField] private bool _isByed;
     [SerializeField] protected Bullet Bullet;
+    [SerializeField] private float _recharging;
 
+    public float Recharging => _recharging;
     public string Label => _label;
     public int Price => _price;
     public Sprite Icon => _icon;

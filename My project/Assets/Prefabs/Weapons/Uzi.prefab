@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1632140809712219603
+--- !u!1 &7373530722386715827
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1632140809712219601}
-  - component: {fileID: 1632140809712219602}
+  - component: {fileID: 6314000578863618245}
+  - component: {fileID: 580338962836165944}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: Uzi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1632140809712219601
+--- !u!4 &6314000578863618245
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632140809712219603}
+  m_GameObject: {fileID: 7373530722386715827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.529318, y: -1.9761502, z: 0.025720332}
+  m_LocalPosition: {x: 3.023136, y: -2.014869, z: -4.7881813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1632140809712219602
+--- !u!114 &580338962836165944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632140809712219603}
+  m_GameObject: {fileID: 7373530722386715827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 634f3a502a638674084f1498af48a2c7, type: 3}
+  m_Script: {fileID: 11500000, guid: ef91a61dd222c334dbc4f70789a4cbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
-  _price: 1
-  _icon: {fileID: 21300000, guid: dd515e1c9426ce643943ae85f244ed24, type: 3}
+  _label: "\u0423\u0437\u0438"
+  _price: 3
+  _icon: {fileID: 21300000, guid: 3ef9a5756392b984dbb520eb116f739c, type: 3}
   _isByed: 1
   Bullet: {fileID: 4418710702822653541, guid: 9fbb73c03fb8b2740be4fee209c8b743, type: 3}
-  _recharging: 0.5
+  _recharging: 1
+  _countShoot: 4
+  _timeBetweenShots: 1

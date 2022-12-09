@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private int _currentWeaponNumber = 0;
     private int _currentHealth;
     private Animator _animator;
+    private float _rechargingWeapon = 0;
     
     public int Money { get; private set; }
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         ChangeWeapon(_weapons[_currentWeaponNumber]);
+        Instantiate(_currentWeapon);
         _currentWeapon = _weapons[0];
         _currentHealth = _health;
         _animator = GetComponent<Animator>();
@@ -30,9 +32,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && _rechargingWeapon <= 0)
         {
             _currentWeapon.Shoot(_shootPoint);
+            _rechargingWeapon = _currentWeapon.Recharging;
+        }
+        else
+        {
+            _rechargingWeapon -= Time.deltaTime;
         }
     }
 

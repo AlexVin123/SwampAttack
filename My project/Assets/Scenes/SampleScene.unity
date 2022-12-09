@@ -225,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.050751552, y: 0.967816}
-  m_AnchoredPosition: {x: -70.5, y: 1.8692932}
+  m_AnchoredPosition: {x: -70.5, y: 1.8692627}
   m_SizeDelta: {x: 53.0237, y: -51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143348171
@@ -1625,7 +1625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.050751552, y: 0.967816}
-  m_AnchoredPosition: {x: -70.5, y: 1.8692932}
+  m_AnchoredPosition: {x: -70.5, y: 1.8692627}
   m_SizeDelta: {x: 53.0237, y: -51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681152859
@@ -2493,7 +2493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 1.5496216, y: 0}
+  m_AnchoredPosition: {x: 1.5495605, y: 0}
   m_SizeDelta: {x: -0.6609, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &860154883
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _weapons:
-  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
+  - {fileID: 580338962836165944, guid: 5e197d1660329834da63173ac6bf8d62, type: 3}
   _shootPoint: {fileID: 400728082}
 --- !u!1 &923151139
 GameObject:
@@ -4842,10 +4842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapons:
-  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
-  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
-  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
-  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
+  - {fileID: 580338962836165944, guid: 5e197d1660329834da63173ac6bf8d62, type: 3}
   _player: {fileID: 860154887}
   _tamplate: {fileID: 5412736117113726761, guid: cab57c2e582432243a56398f7140c680, type: 3}
   _itemConteiner: {fileID: 318765496}
@@ -5589,12 +5586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
-  - Template: {fileID: 2240612955252351084, guid: f3c5d235d14a8ae43bf77e712c9e2e88, type: 3}
+  - Template: {fileID: 5573401234823558589, guid: 7b68996ca81e0ec458349846a0a3cab6, type: 3}
     Delay: 2
-    Count: 5
+    Count: 7
   - Template: {fileID: 2240612955252351084, guid: f3c5d235d14a8ae43bf77e712c9e2e88, type: 3}
-    Delay: 2
-    Count: 8
+    Delay: 1.5
+    Count: 10
   _spawnPoint: {fileID: 1967298609}
   _player: {fileID: 860154887}
 --- !u!4 &1967298609
@@ -6220,6 +6217,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 1.5496216, y: 0}
+  m_AnchoredPosition: {x: 1.5495605, y: 0}
   m_SizeDelta: {x: -0.6609, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
