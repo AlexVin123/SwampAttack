@@ -11,17 +11,32 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < _weapons.Count; i++)
+        for (int i = 0; i < _weapons.Count; i++)
         {
             AddItem(_weapons[i]);
         }
-        
+
     }
 
     private void AddItem(Weapon weapon)
     {
         var view = Instantiate(_tamplate, _itemConteiner.transform);
-
+        view.SellButtonClick += OnSellButtonClick; 
         view.Render(weapon);
+    }
+
+    private void OnSellButtonClick(Weapon weapon, WeaponView view)
+    {
+        trySellWeaapon(weapon, view);
+    }
+
+    private void trySellWeaapon(Weapon weapon, WeaponView view)
+    {
+        if (weapon.Price <= _player.Money)
+        {
+            _player.BuyWeapon(weapon);
+            weapon.Buy(); 
+            view.SellButtonClick -= OnSellButtonClick;
+        }
     }
 }
