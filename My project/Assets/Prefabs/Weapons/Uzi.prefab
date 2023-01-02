@@ -50,5 +50,5 @@ MonoBehaviour:
   _isByed: 1
   Bullet: {fileID: 4418710702822653541, guid: 9fbb73c03fb8b2740be4fee209c8b743, type: 3}
   _recharging: 1
-  _countShoot: 4
-  _timeBetweenShots: 1
+  _countShoot: 3
+  _timeBetweenShots: 0.1

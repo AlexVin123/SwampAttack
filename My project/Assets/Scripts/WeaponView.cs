@@ -28,18 +28,18 @@ public class WeaponView : MonoBehaviour
         _sellButton.onClick.RemoveListener(TryLockItem);
     }
 
+    public void Render(Weapon weapon)
+    {
+        _weapon = weapon; 
+        _label.text = weapon.Label;
+        _price.text = weapon.Price.ToString();
+        _icon.sprite = weapon.Icon;
+    }
+
     private void TryLockItem()
     {
         if (_weapon.IsByed)
             _sellButton.interactable = false;
-    }
-
-    public void Render(Weapon weapon)
-    {
-        _weapon = weapon; 
-        _label.text = _weapon.Label;
-        _price.text = _weapon.Price.ToString();
-        _icon.sprite = weapon.Icon;
     }
 
     private void OnButtonClick()

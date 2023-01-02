@@ -7,10 +7,6 @@ public class Uzi : Weapon
     [SerializeField] private int _countShoot;
     [SerializeField] private float _timeBetweenShots;
 
-    private void Update()
-    {
-        
-    }
     public override void Shoot(Transform shootPoint)
     {
         StartCoroutine(Shots(shootPoint));
@@ -23,6 +19,7 @@ public class Uzi : Weapon
             Instantiate(Bullet, shootPoint.position, Quaternion.identity);
             yield return new WaitForSeconds(_timeBetweenShots);
         }
-        
+
+        StopCoroutine(Shots(shootPoint));       
     }
 }

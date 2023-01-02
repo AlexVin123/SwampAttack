@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private List<Weapon> _weapons;
+    [SerializeField] private Weapon[] _weapons;
     [SerializeField] private Player _player;
     [SerializeField] private WeaponView _tamplate;
     [SerializeField] private GameObject _itemConteiner;
+    [SerializeField] private PullWeapon pullWeapon;
 
     private void Start()
     {
-        for (int i = 0; i < _weapons.Count; i++)
+        _weapons = pullWeapon.SetWeaponsInShop();
+
+        for (int i = 0; i < _weapons.Length; i++)
         {
             AddItem(_weapons[i]);
         }
-
     }
 
     private void AddItem(Weapon weapon)

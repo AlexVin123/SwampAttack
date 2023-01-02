@@ -7,14 +7,13 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int _health;
-    [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private PullWeapon _pullWeapons;
 
+    private List<Weapon> _weapons = new List<Weapon>();
     private Weapon _currentWeapon;
     private int _currentWeaponNumber = 0;
     private int _currentHealth;
-    private Animator _animator;
-    private float _rechargingWeapon = 0;
     
     public int Money { get; private set; }
 
@@ -23,23 +22,18 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        ChangeWeapon(_weapons[_currentWeaponNumber]);
-        Instantiate(_currentWeapon);
+        _weapons.Add(_pullWeapons.GiveStartWeapon());
         _currentWeapon = _weapons[0];
+        ChangeWeapon(_weapons[_currentWeaponNumber]);
+        _currentWeapon.gameObject.SetActive(true);
         _currentHealth = _health;
-        _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && _rechargingWeapon <= 0)
+        if(Input.GetMouseButtonDown(0))
         {
-            _currentWeapon.Shoot(_shootPoint);
-            _rechargingWeapon = _currentWeapon.Recharging;
-        }
-        else
-        {
-            _rechargingWeapon -= Time.deltaTime;
+            _currentWeapon.StartShoot(_shootPoint);
         }
     }
 
@@ -48,7 +42,7 @@ public class Player : MonoBehaviour
         _currentHealth -= damage;
         HealthChanged?.Invoke(_currentHealth, _health);
 
-        if(_currentHealth <= 0)
+        if (_currentHealth <= 0)
         {
             Destroy(gameObject);
         }
@@ -94,6 +88,8 @@ public class Player : MonoBehaviour
 
     private void ChangeWeapon(Weapon weapon)
     {
+        _currentWeapon.gameObject.SetActive(false);
         _currentWeapon = weapon;
+        _currentWeapon.gameObject.SetActive(true);
     }
 }

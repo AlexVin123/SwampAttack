@@ -2616,9 +2616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  _weapons:
-  - {fileID: 580338962836165944, guid: 5e197d1660329834da63173ac6bf8d62, type: 3}
   _shootPoint: {fileID: 400728082}
+  _pullWeapons: {fileID: 1439302089}
 --- !u!1 &923151139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,6 +4003,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406222636}
   m_CullTransparentMesh: 1
+--- !u!1 &1439302088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439302090}
+  - component: {fileID: 1439302089}
+  m_Layer: 0
+  m_Name: Weapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1439302089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439302088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa60a5d8130b5f548a376627ac3a35ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapons:
+  - {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
+  - {fileID: 5400289169349181209, guid: 9735e55d05fd6cb47ae66684e0f5ece4, type: 3}
+  - {fileID: 580338962836165944, guid: 5e197d1660329834da63173ac6bf8d62, type: 3}
+  _startWeapon: {fileID: 1632140809712219602, guid: 65576c7e3d6171548ada149720691764, type: 3}
+--- !u!4 &1439302090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439302088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5862164, y: -2.6497078, z: -4.772003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466908919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,11 +4889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2d6b346a6999746aff97ab74eb692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapons:
-  - {fileID: 580338962836165944, guid: 5e197d1660329834da63173ac6bf8d62, type: 3}
+  _weapons: []
   _player: {fileID: 860154887}
   _tamplate: {fileID: 5412736117113726761, guid: cab57c2e582432243a56398f7140c680, type: 3}
   _itemConteiner: {fileID: 318765496}
+  pullWeapon: {fileID: 1439302089}
 --- !u!114 &1775241098
 MonoBehaviour:
   m_ObjectHideFlags: 0

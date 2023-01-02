@@ -8,7 +8,6 @@ public class TargetDieTransition : Transition
     {
         if(Target == null)
         {
-            Debug.Log("dfdffsd");
             NeedTransit = true;
         }
     }
